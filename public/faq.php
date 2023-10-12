@@ -44,19 +44,15 @@
             </form>
             <span id="searchTerm" class="searchTerm">
                 <?php
-                    if( array_key_exists( "search", $_GET ) && $_GET[ 'search' ] != NULL ) {
-
-                        // TODO Problem 
-                        $searchQuery = $_GET[ 'search' ];
-                        
+                    if( array_key_exists( "search", $_GET ) && $_GET[ 'search' ] != NULL ) {    
                         // TODO FIX
-                        // $searchQuery = $_GET["search"];
-                        // $searchQuery = strtolower($searchQuery);
+                        $searchQuery = $_GET["search"];
+                        $searchQuery = strtolower($searchQuery);
 
                         // <scr<script>ipt>
-                        // while ((strpos($searchQuery,"script"))) {
-                        //     $searchQuery = str_replace("script","!!!",$searchQuery);
-                        // }
+                        while ((strpos($searchQuery,"script"))) {
+                            $searchQuery = str_replace("script","!!!",$searchQuery);
+                        }
 
                         // Output
                         $out = '<pre> Looking for ' . $searchQuery . '</pre>';
