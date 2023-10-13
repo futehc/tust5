@@ -58,17 +58,7 @@ Together, let's navigate the challenges of cloud architectures and security by e
 - [visit-local] localhost/InsecureTrust_Bank
 
 ## Vulnerablitis
-1. S-XSS
-    - S-XSS typically refers to "Stored Cross-Site Scripting," where malicious scripts are stored on a web server and executed when viewed by other users, potentially leading to security vulnerabilities. 
-    - CVE code: ```CVE-2023-2718```
-    - In ITB, [Support Page] has "Description" field which is prone to S-XSS.
-    - Sample Code to demonstrate it:
-        ```HTML 
-        <span onmouseover="window.location='try.php?url='+encodeURIComponent(window.location.href)">Hover over me</span>
-        ```
-    - [Fixed Code](https://github.com/Hritikpatel/SecureTrust_Bank/blob/7fd1f9ecdcb369344c297486a502881b55ab6916/assets/php_process/support_request.php#L38), Here htmlspecialchars is used for encoding response...
-
-2. R-XSS
+1. R-XSS
     - R-XSS is a type of cross-site scripting vulnerability where an attacker injects malicious scripts that are reflected off a web server and executed in a victim's browser.
     - CVE code: ```CVE-2023-29457```
     - In ITB, [FAQ Page] has a search bar to search through questions and is prone to R-XSS.
@@ -104,7 +94,26 @@ Together, let's navigate the challenges of cloud architectures and security by e
         </script>
         ```
     - [Fixed Code](https://github.com/Hritikpatel/SecureTrust_Bank/blob/7fd1f9ecdcb369344c297486a502881b55ab6916/public/faq.php#L53), Here user input is getting appended in HTML after removing script tag...
-3. SQL Injection
+2. S-XSS
+    - S-XSS typically refers to "Stored Cross-Site Scripting," where malicious scripts are stored on a web server and executed when viewed by other users, potentially leading to security vulnerabilities. 
+    - CVE code: ```CVE-2023-2718```
+    - In ITB, [Support Page] has "Description" field which is prone to S-XSS.
+    - Sample Code to demonstrate it:
+        ```HTML 
+        <span onmouseover="window.location='try.php?url='+encodeURIComponent(window.location.href)">Hover over me</span>
+        ```
+    - [Fixed Code](https://github.com/Hritikpatel/SecureTrust_Bank/blob/7fd1f9ecdcb369344c297486a502881b55ab6916/assets/php_process/support_request.php#L38), Here htmlspecialchars is used for encoding response...
+
+3. File Injection
+    - File Injection is a security vulnerability where an attacker can manipulate or inject malicious files, typically to exploit a system's processing and execute unauthorized code or access sensitive data, potentially compromising system integrity and security.
+    - CVE code: ```CVE-2020-25048```
+    - In ITB, [Support Page]'s Attachments feild is vulnerable to file injection.
+    - Sample Code to demonstrate it:
+        ```HTML
+        ./try.php
+        ```
+    - [Fixed Code](https://github.com/Hritikpatel/SecureTrust_Bank/blob/7fd1f9ecdcb369344c297486a502881b55ab6916/assets/php_process/support_request.php#L85), Here we are cheacking file type and file format...
+4. SQL Injection
     - SQL Injection is a malicious technique where an attacker inserts or manipulates SQL queries within an web app's input fields, potentially allowing unauthorized access, data retrieval, modification, or deletion in a connected database, posing significant security risks.
     - CVE code: ```CVE-2023-4485```
     - In ITB, [LogIn Page]'s password feild is vulnerable to SQL injection.
@@ -114,15 +123,6 @@ Together, let's navigate the challenges of cloud architectures and security by e
         ```
     - [Fixed Code](https://github.com/Hritikpatel/SecureTrust_Bank/blob/7fd1f9ecdcb369344c297486a502881b55ab6916/assets/php_process/login_process.php#L37), Here database query is getting genrated using prepare statement...
     
-4. File Injection
-    - File Injection is a security vulnerability where an attacker can manipulate or inject malicious files, typically to exploit a system's processing and execute unauthorized code or access sensitive data, potentially compromising system integrity and security.
-    - CVE code: ```CVE-2020-25048```
-    - In ITB, [Support Page]'s Attachments feild is vulnerable to file injection.
-    - Sample Code to demonstrate it:
-        ```HTML
-        ./try.php
-        ```
-    - [Fixed Code](https://github.com/Hritikpatel/SecureTrust_Bank/blob/7fd1f9ecdcb369344c297486a502881b55ab6916/assets/php_process/support_request.php#L85), Here we are cheacking file type and file format...
 5. Insecure API
     - Insecure API refers to an application programming interface that lacks proper security measures, making it susceptible to various threats such as data breaches, unauthorized access, and manipulation, highlighting the need for robust security practices to protect sensitive data and ensure the integrity of communication.
     - CVE code: ```CVE-2023-40729```
