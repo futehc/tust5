@@ -129,7 +129,7 @@ Together, let's navigate the challenges of cloud architectures and security by e
     - In ITB, all data in [Dashboard Page] is coming thorugh insecure API.
     - [Fixed Code](https://github.com/Hritikpatel/SecureTrust_Bank/blob/7fd1f9ecdcb369344c297486a502881b55ab6916/assets/php_process/api.php#L29), Here we are forwarding SQL response to client after encrypting data in base64...
 
-## Vulnerablity mentioned above are showcased in [STB]
+## Vulnerablity mentioned above are showcased in [ITB]
 
 
 [//]: #
