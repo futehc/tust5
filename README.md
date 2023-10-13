@@ -136,11 +136,11 @@ Together, let's navigate the challenges of cloud architectures and security by e
 
    [ITB]: <https://github.com/Hritikpatel/InsecureTrust_Bank>
    [STB]: <https://github.com/Hritikpatel/SecureTrust_Bank>
-   [Visit-Local]: <http://localhost/InsecureTrust_Bank/>
-   [Support Page]: <http://74.235.107.26/InsecureTrust_Bank/public/support.php>
-   [FAQ Page]: <http://74.235.107.26/InsecureTrust_Bank/public/faq.php>
-   [LogIn Page]: <http://74.235.107.26/InsecureTrust_Bank/public/login.php>
-   [dashboard Page]: <http://74.235.107.26/InsecureTrust_Bank/public/dashboard.php>
+   [Visit-Local]: <http://localhost/SecureTrust_Bank/>
+   [Support Page]: <http://74.235.107.26/SecureTrust_Bank/public/support.php>
+   [FAQ Page]: <http://74.235.107.26/SecureTrust_Bank/public/faq.php>
+   [LogIn Page]: <http://74.235.107.26/SecureTrust_Bank/public/login.php>
+   [dashboard Page]: <http://74.235.107.26/SecureTrust_Bank/public/dashboard.php>
    [JS]: <https://www.javascript.com/>
    [jQuery]: <http://jquery.com>
    [XAMPP]: <https://www.apachefriends.org/>
